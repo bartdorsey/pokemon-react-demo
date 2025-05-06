@@ -1,4 +1,7 @@
-export default function PokemonDetail({
+import styles from "./PokemonModal.module.css";
+
+console.log(styles);
+export default function PokemonModal({
     pokemon,
     onClose,
 }: {
@@ -6,9 +9,9 @@ export default function PokemonDetail({
     onClose: () => void;
 }) {
     return (
-        <div className="modal-overlay">
-            <div className="modal-content">
-                <div className="modal-close" onClick={onClose}>
+        <div className={styles.modalOverlay}>
+            <div className={styles.modalContent}>
+                <div className={styles.modalClose} onClick={onClose}>
                     ❌
                 </div>
                 <img src={pokemon.sprites.front_default} />

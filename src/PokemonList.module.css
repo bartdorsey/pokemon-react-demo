@@ -1,0 +1,15 @@
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+.pager {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.pageNumbers {
+    display: flex;
+}

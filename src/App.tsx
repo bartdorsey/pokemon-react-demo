@@ -1,11 +1,15 @@
-import "./App.css";
 import PokemonList from "./PokemonList";
 
 function App() {
     return (
-        <main>
-            <PokemonList />
-        </main>
+        <>
+            <header>
+                <h1>Pokedex</h1>
+            </header>
+            <main>
+                <PokemonList />
+            </main>
+        </>
     );
 }
 

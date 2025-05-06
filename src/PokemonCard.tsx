@@ -1,3 +1,5 @@
+import styles from "./PokemonCard.module.css";
+
 export default function PokemonCard({
     pokemon,
     onClick,
@@ -6,7 +8,7 @@ export default function PokemonCard({
     onClick: (pokemon: Pokemon) => void;
 }) {
     return (
-        <li className="card" onClick={() => onClick(pokemon)}>
+        <li className={styles.card} onClick={() => onClick(pokemon)}>
             <img src={pokemon.image} />
             <p>{pokemon.name}</p>
         </li>
