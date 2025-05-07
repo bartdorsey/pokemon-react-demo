@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
+:root {
+    --background-color: #f8f9fa;
+    --text-color: #212529;
+    --highlight-color: #007bff;
+    --reversed-text-color: white;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -11,8 +18,8 @@ ul {
 body {
     margin: 0;
     font-family: system-ui, sans-serif;
-    background: #f8f9fa;
-    color: #212529;
+    background: var(--background-color);
+    color: var(--text-color);
 }
 
 h1 {
@@ -37,5 +44,5 @@ button {
 }
 
 button:hover {
-    background: #0056b3;
+    filter: brightness(85%);
 }

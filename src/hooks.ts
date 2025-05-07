@@ -88,3 +88,52 @@ export function usePokemons(initialLimit: number = 20) {
         numPages: Math.round(count / limit),
     };
 }
+
+export function usePokemon(id?: string) {
+    const [pokemon, setPokemon] = useState<PokemonDetail | null>(null);
+    const [error, setError] = useState<Error | null>(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        // Because React Router gives us a string | undefined
+        // We have to add a few checks here
+        if (!id) {
+            setLoading(false);
+            setError(new Error("id did not exist"));
+            return;
+        }
+        // Convert it to an int
+        const numericId = parseInt(id);
+
+        // Check if it was an int or NaN
+        if (isNaN(numericId)) {
+            setLoading(false);
+            setError(new Error("Id as not a number"));
+            return;
+        }
+        // Then finally we can fetch
+        async function fetchPokemonDetail(id: number) {
+            try {
+                const response = await fetch(`${baseURL}/pokemon/${id}`);
+                if (!response.ok) {
+                    throw new Error("Error fetching pokemon data");
+                }
+                const data = (await response.json()) as PokemonDetail;
+                setPokemon(data);
+                setLoading(false);
+            } catch (e) {
+                if (e instanceof Error) {
+                    setError(e);
+                    setLoading(false);
+                }
+            }
+        }
+        fetchPokemonDetail(numericId);
+    }, [id]);
+
+    return {
+        pokemon,
+        error,
+        loading,
+    };
+}

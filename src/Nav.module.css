@@ -1,0 +1,24 @@
+.nav {
+    padding: 0 2rem;
+}
+
+.nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav a {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    color: var(--text-color);
+}
+
+.nav a:visited {
+    color: var(--text-color);
+}
+
+.nav a[aria-current="page"] {
+    background-color: var(--highlight-color);
+    color: white;
+}
