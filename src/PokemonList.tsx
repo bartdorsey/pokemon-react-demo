@@ -24,22 +24,6 @@ export default function PokemonList() {
         return <h1>{error.message}</h1>;
     }
 
-    // Handles what happens when we click a pokemon
-    async function handleClick(pokemon: Pokemon) {
-        try {
-            const response = await fetch(pokemon.url);
-            if (!response.ok) {
-                throw new Error("Couldn't fetch pokemon details");
-            }
-            const pokemonDetail = (await response.json()) as PokemonDetail;
-            setSelectedPokemon(pokemonDetail);
-        } catch (e) {
-            if (e instanceof Error) {
-                setDetailError(e);
-            }
-        }
-    }
-
     return (
         <>
             {/* The pager div puts up next and previous buttons */}
@@ -64,15 +48,11 @@ export default function PokemonList() {
             )}
 
             {/* This renders the list of all the pokemon in a grid */}
-            <ul className={styles.cardGrid}>
+            <div className={styles.cardGrid}>
                 {pokemons.map((pokemon) => (
-                    <PokemonCard
-                        onClick={handleClick}
-                        key={pokemon.id}
-                        pokemon={pokemon}
-                    />
+                    <PokemonCard key={pokemon.id} pokemon={pokemon} />
                 ))}
-            </ul>
+            </div>
         </>
     );
 }

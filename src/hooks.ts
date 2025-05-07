@@ -14,7 +14,7 @@ function extractIdFromUrl(url: string): number {
  * @description This function returns an image URL for a pokemon id
  */
 function buildPokemonImageUrl(id: number): string {
-    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
+    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
 }
 
 // This is a custom hook. We do this to keep this logic out of the PokemonList component

@@ -1,0 +1,151 @@
+.detail {
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.images {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.detail .mainImage {
+    max-width: 10rem;
+}
+
+.detail .shinyImage {
+    max-width: 10rem;
+}
+
+.detail .heroImages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.attributes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    & p {
+        margin: 0;
+    }
+}
+
+.types {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+    & p {
+        padding: 0.5rem 1rem;
+        color: white;
+        margin: 0;
+        border-radius: 0.5rem;
+    }
+}
+
+.normal {
+    background-color: #A8A77A;
+}
+
+.fire {
+    background-color: #EE8130;
+}
+
+.water {
+    background-color: #6390F0;
+}
+
+.electric {
+    background-color: #F7D02C;
+}
+
+.grass {
+    background-color: #7AC74C;
+}
+
+.ice {
+    background-color: #96D9D6;
+}
+
+.fighting {
+    background-color: #C22E28;
+}
+
+.poison {
+    background-color: #A33EA1;
+}
+
+.ground {
+    background-color: #E2BF65;
+}
+
+.flying {
+    background-color: #A98FF3;
+}
+
+.psychic {
+    background-color: #F95587;
+}
+
+.bug {
+    background-color: #A6B91A;
+}
+
+.rock {
+    background-color: #B6A136;
+}
+
+.ghost {
+    background-color: #735797;
+}
+
+.dragon {
+    background-color: #6F35FC;
+}
+
+.dark {
+    background-color: #705746;
+}
+
+.steel {
+    background-color: #B7B7CE;
+}
+
+.fairy {
+    background-color: #D685AD;
+}
+
+.card {
+    margin: 0;
+    aspect-ratio: 1;
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    & img {
+        max-width: 8rem;
+    }
+}
+
+.moves {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.moves p {
+    background-color: lightgrey;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    border-radius: 0.5rem;
+}

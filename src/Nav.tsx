@@ -9,7 +9,9 @@ export default function Nav() {
                     <NavLink to="/">Home</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/pokedex">Pokedex</NavLink>
+                    <NavLink to="/pokedex" end>
+                        Pokedex
+                    </NavLink>
                 </li>
             </ul>
         </nav>

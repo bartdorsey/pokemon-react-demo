@@ -15,6 +15,15 @@ ul {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+figure {
+    margin: 0;
+}
+
 body {
     margin: 0;
     font-family: system-ui, sans-serif;
@@ -25,10 +34,6 @@ body {
 h1 {
     text-align: center;
     margin-top: 1rem;
-}
-
-img {
-    max-width: 100px;
 }
 
 button {

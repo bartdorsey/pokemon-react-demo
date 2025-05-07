@@ -15,10 +15,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/pokedex" element={<PokemonList />} />
-                    <Route
-                        path="/pokedex/:id(\d+)"
-                        element={<PokemonDetail />}
-                    />
+                    <Route path="/pokedex/:id" element={<PokemonDetail />} />
                     <Route path="*" element={<h1>Not Found</h1>} />
                 </Routes>
             </main>
